@@ -57,7 +57,7 @@ export default {
     },
     tools: {
       type: Array,
-      default: []
+      default: () => []
     }
   },
   mounted() {}

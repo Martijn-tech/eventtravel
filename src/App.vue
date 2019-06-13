@@ -12,7 +12,7 @@
       class="d-flex justify-content-center"
     >
       <div
-        class="spinner-grow text-primary"
+        class="spinner-grow spinner-color"
         role="status"
         style="width: 4rem; height: 4rem;"
       ></div>
@@ -85,4 +85,9 @@ export default {
 }
 </script>
 
-<style></style>
+<style scoped>
+  .spinner-color {
+    color: #66D1D1;
+  }
+
+</style>
