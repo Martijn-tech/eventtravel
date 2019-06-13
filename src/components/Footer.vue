@@ -11,7 +11,7 @@
     <!-- TWITTER -->
     <hr />
     <p class="text-muted font-italic">
-      KickassEventSites.com is created by <a href="https://twitter.com/ckpleiser">Carsten Pleiser</a> and brought to you by <a href="https://get.swoogo.com">Swoogo</a>.
+      KickassEventSites.com has been created by <a href="https://twitter.com/ckpleiser">Carsten Pleiser</a> and is brought to you by <a href="https://get.swoogo.com">Swoogo</a>.
       <br />
     </p>
     <p class="text-secondary muted">
