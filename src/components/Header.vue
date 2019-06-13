@@ -26,7 +26,6 @@ export default {
 
 .header {
   margin-top: 4rem;
-  height: 6rem;
 }
 
 .logo {

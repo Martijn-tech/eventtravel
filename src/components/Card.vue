@@ -19,11 +19,11 @@
         >Crunchbase</a
       > -->
     </div>
-    <!-- <ul class="list-group list-group-flush">
-      <li v-if="funding" class="list-group-item">
-        <span class="label">Funding</span> {{ funding }}
+    <ul class="list-group list-group-flush">
+      <li v-if="tools && tools !== 'Bespoke' && tools !== 'Unknown'" class="list-group-item">
+        <span class="label">Built with:</span> {{ tools }}
       </li>
-    </ul> -->
+    </ul>
   </div>
 </template>
 
@@ -54,6 +54,10 @@ export default {
     tags: {
       type: Array,
       default: () => []
+    },
+    tools: {
+      type: Array,
+      default: []
     }
   },
   mounted() {}
