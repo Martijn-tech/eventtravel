@@ -4,23 +4,23 @@
     Follow
     <a
       class="twitter-follow-button text-center"
-      href="https://twitter.com/aec_startups?ref_src=twsrc%5Etfw"
+      href="https://twitter.com/ckpleiser"
       data-show-count="false"
-      >@aec_startups</a
+      >@CKPleiser</a
     >
     <!-- TWITTER -->
     <hr />
     <p class="text-muted font-italic">
-      AecStartups.com is an open-source list of Shiny Startups in the AEC Space.
+      KickassEventSites.com is created by <a href="https://twitter.com/ckpleiser">Carsten Pleiser</a> and brought to you by <a href="https://get.swoogo.com">Swoogo</a>.
       <br />
     </p>
     <p class="text-secondary muted">
-      <a class="text-muted" href="https://twitter.com/gtalarico"
-        >Gui Talarico</a
+      <a class="text-muted" href="https://twitter.com/swoogo"
+        >@Swoogo</a
       >
       <span>|</span>
-      <a class="text-muted" href="https://github.com/gtalarico/aec-startups"
-        >Contribute</a
+      <a class="text-muted" href="https://airtable.com/shrrFlvRjZDhCfbu2"
+        >Submit your site</a
       >
     </p>
   </div>

@@ -1,10 +1,10 @@
 <template>
   <div class="container header">
-    <h2 class="text-center logo">
-      Aec Startups
-    </h2>
+    <h1 class="text-center logo">
+      Event Website Inspiration
+    </h1>
     <p class="text-center lead text-secondary logo-subtitle">
-      Shiny Startups in the AEC Space
+      Beautiful Event Websites From Great Companies.
     </p>
   </div>
 </template>
@@ -30,15 +30,16 @@ export default {
 }
 
 .logo {
-  font-family: ABeeZee;
+  font-family: 'Open Sans';
   font-weight: 700;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
+  color: #ffffff;
 }
 
 .logo-subtitle {
-  font-size: 0.9rem;
+  font-size: 1.5rem;
   font-weight: 400;
   color: $primary;
 }

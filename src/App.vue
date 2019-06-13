@@ -2,14 +2,13 @@
   <section>
     <Header />
     <Nav
-      :startups="startups"
+      :websites="websites"
       :selected-tags="selectedTags"
       @tag-selected="tagSelected"
     />
-    <Overlay />
-    <Grid v-if="startups.length > 0" :startups="filteredStartups" />
+    <Grid v-if="websites.length > 0" :websites="filteredWebsites" />
     <div
-      v-if="startups.lenght === 0 && !error"
+      v-if="websites.length === 0 && !error"
       class="d-flex justify-content-center"
     >
       <div
@@ -30,7 +29,6 @@
 <script>
 import Header from '@/components/Header.vue'
 import Nav from '@/components/Nav.vue'
-import Overlay from '@/components/Overlay.vue'
 import Grid from '@/components/Grid.vue'
 import Footer from '@/components/Footer.vue'
 import lambdaService from '@/lambdaService'
@@ -39,22 +37,21 @@ export default {
   components: {
     Header,
     Nav,
-    Overlay,
     Grid,
     Footer
   },
   data: function() {
     return {
-      startups: [],
+      websites: [],
       selectedTags: [],
       error: null
     }
   },
   computed: {
-    filteredStartups() {
-      if (this.selectedTags.length === 0) return this.startups
+    filteredWebsites() {
+      if (this.selectedTags.length === 0) return this.websites
       else
-        return this.startups
+        return this.websites
           .filter(f => f.tags.some(t => this.selectedTags.includes(t)))
           .sort((a, b) => (a.title > b.title ? 1 : a.title < b.title ? -1 : 0))
     }
@@ -63,7 +60,7 @@ export default {
     lambdaService
       .fetchRecords()
       .then(response => {
-        this.startups = response.records
+        this.websites = response.records
           .map(r => r.fields)
           .filter(o => o.approved)
       })

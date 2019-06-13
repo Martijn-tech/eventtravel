@@ -3,7 +3,7 @@
     <card-news />
     <card-add />
     <card
-      v-for="(entry, i) in startups"
+      v-for="(entry, i) in websites"
       :key="i"
       v-bind="entry"
       :card-id="idFromTitle(entry.title)"
@@ -26,7 +26,7 @@ export default {
     CardNews
   },
   props: {
-    startups: {
+    websites: {
       type: Array,
       default: () => []
     }
@@ -42,7 +42,7 @@ export default {
     }
   },
   watch: {
-    startups() {
+    websites() {
       this.$nextTick(() => {
         this.initGrid()
       })
@@ -55,7 +55,7 @@ export default {
     initGrid() {
       this.magicGrid = new MagicGrid({
         container: this.$el,
-        items: this.startups.length,
+        items: this.websites.length,
         animate: true,
         gutter: 20
         // useMin: true

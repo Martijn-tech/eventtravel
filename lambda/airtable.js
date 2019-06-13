@@ -2,16 +2,15 @@ const Airtable = require('airtable')
 
 Airtable.configure({
   endpointUrl: 'https://api.airtable.com',
-  apiKey: process.env.AIRTABLE_KEY
+  apiKey: process.env.AIRTABLE_KEY || 'keyCUprna0G9NBdQu'
 })
-const base = Airtable.base('appNtnZ99fkL1cByn')
+const base = Airtable.base('appLRFImvcpQmQfNQ')
 
 exports.handler = function(event, context, callback) {
   const allRecords = []
-  base('entries')
+  base('eventwebsites')
     .select({
-      maxRecords: 100,
-      view: 'all'
+      maxRecords: 100
     })
     .eachPage(
       function page(records, fetchNextPage) {

@@ -3,13 +3,14 @@
     <div class="card-img-top" alt="Logo" />
     <div class="card-body">
       <p class="card-text">
-        <a href="https://airtable.com/shrLpxcEdauXQcecZ" target="blank">
+        <a href="https://airtable.com/shrrFlvRjZDhCfbu2" target="blank">
           <img src="@/assets/imgs/plus.png" alt="plus-sign" />
         </a>
       </p>
       <p>
-        <a href="https://airtable.com/shrLpxcEdauXQcecZ" target="blank"
-          >Submit Entry</a
+        Want to list your event site here?<br/>
+        <a href="https://airtable.com/shrrFlvRjZDhCfbu2" target="blank"
+          >Submit it for free</a
         >
       </p>
     </div>
@@ -25,7 +26,7 @@ export default {
 
 <style lang="scss">
 .card-img-top {
-  background: linear-gradient(15deg, #745fb5, #9a6dbb);
+  background: #F2D43C;
 }
 .card-body {
   img {

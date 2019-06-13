@@ -24,7 +24,7 @@
 <script>
 export default {
   props: {
-    startups: {
+    websites: {
       type: Array,
       default: () => []
     },
@@ -40,7 +40,7 @@ export default {
     tags() {
       return Array.from(
         new Set(
-          this.startups
+          this.websites
             .map(s => s.tags)
             .reduce((a, b) => [...a, ...b], [])
             .sort()
