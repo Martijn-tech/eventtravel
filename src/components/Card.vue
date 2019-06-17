@@ -3,7 +3,6 @@
     :id="cardId"
     class="card"
     :class="{ 'card-selected': $route.hash.includes(cardId) }"
-    @click="$emit('click')"
   >
     <img v-if="image" class="card-img-top" :src="image[0].url" alt="Screenshot" />
     <div v-else class="card-img-top no-logo" alt="Logo" />
@@ -41,7 +40,7 @@ export default {
     },
     image: {
       type: Array,
-      default: []
+      default: () => []
     },
     description: {
       type: String,
@@ -56,8 +55,8 @@ export default {
       default: () => []
     },
     tools: {
-      type: Array,
-      default: () => []
+      type: String,
+      default: ''
     }
   },
   mounted() {}
