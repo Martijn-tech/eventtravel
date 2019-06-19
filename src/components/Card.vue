@@ -4,7 +4,12 @@
     class="card"
     :class="{ 'card-selected': $route.hash.includes(cardId) }"
   >
-    <img v-if="image" class="card-img-top" :src="image[0].url" alt="Screenshot" />
+    <img
+      v-if="image"
+      class="card-img-top"
+      :src="image[0].url"
+      alt="Screenshot"
+    />
     <div v-else class="card-img-top no-logo" alt="Logo" />
     <div class="card-body">
       <h5 class="card-title">{{ title }}</h5>
@@ -19,7 +24,10 @@
       > -->
     </div>
     <ul class="list-group list-group-flush">
-      <li v-if="tools && tools !== 'Bespoke' && tools !== 'Unknown'" class="list-group-item">
+      <li
+        v-if="tools && tools !== 'Bespoke' && tools !== 'Unknown'"
+        class="list-group-item"
+      >
         <span class="label">Built with:</span> {{ tools }}
       </li>
     </ul>

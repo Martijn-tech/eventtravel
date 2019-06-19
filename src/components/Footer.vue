@@ -11,13 +11,13 @@
     <!-- TWITTER -->
     <hr />
     <p class="text-muted font-italic">
-      KickassEventSites.com has been created by <a href="https://twitter.com/ckpleiser">Carsten Pleiser</a> and is brought to you by <a href="https://get.swoogo.com">Swoogo</a>.
+      KickassEventSites.com has been created by
+      <a href="https://twitter.com/ckpleiser">Carsten Pleiser</a> and is brought
+      to you by <a href="https://get.swoogo.com">Swoogo</a>.
       <br />
     </p>
     <p class="text-secondary muted">
-      <a class="text-muted" href="https://twitter.com/swoogo"
-        >@Swoogo</a
-      >
+      <a class="text-muted" href="https://twitter.com/swoogo">@Swoogo</a>
       <span>|</span>
       <a class="text-muted" href="https://airtable.com/shrrFlvRjZDhCfbu2"
         >Submit your site</a

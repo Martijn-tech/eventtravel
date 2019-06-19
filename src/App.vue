@@ -86,8 +86,7 @@ export default {
 </script>
 
 <style scoped>
-  .spinner-color {
-    color: #66D1D1;
-  }
-
+.spinner-color {
+  color: #66d1d1;
+}
 </style>

@@ -8,7 +8,7 @@
         </a>
       </p>
       <p>
-        Want to list your event site here?<br/>
+        Want to list your event site here?<br />
         <a href="https://airtable.com/shrrFlvRjZDhCfbu2" target="blank"
           >Submit it for free</a
         >
@@ -26,7 +26,7 @@ export default {
 
 <style lang="scss">
 .card-img-top {
-  background: #F2D43C;
+  background: #f2d43c;
 }
 .card-body {
   img {
