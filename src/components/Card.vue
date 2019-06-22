@@ -28,7 +28,13 @@
         v-if="tools && tools !== 'Bespoke' && tools !== 'Unknown'"
         class="list-group-item"
       >
-        <span class="label">Built with:</span> {{ tools }}
+        <span class="label">Built with:</span
+        ><a
+          v-if="landingpage && landingpage !== 'null'"
+          :href="landingpage"
+          target="_blank"
+          >{{ tools }}</a
+        ><span v-else>{{ tools }}</span>
       </li>
     </ul>
   </div>
@@ -63,6 +69,10 @@ export default {
       default: () => []
     },
     tools: {
+      type: String,
+      default: ''
+    },
+    landingpage: {
       type: String,
       default: ''
     }
