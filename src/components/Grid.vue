@@ -2,12 +2,21 @@
   <main id="grid" class="grid" :class="{ 'grid-ready': gridIsReady }">
     <card-news />
     <card-add />
+    <Modal
+      v-if="currentEntry"
+      :title="currentEntry.title"
+      :screenshot="currentEntry.image[0]"
+      :tools="currentEntry.tools"
+      :landingpage="currentEntry.landingpage"
+      :website="currentEntry.website"
+    />
     <card
       v-for="(entry, i) in websites"
       :key="i"
       v-bind="entry"
       :card-id="idFromTitle(entry.title)"
       @click="$router.push({ path: `#${idFromTitle(entry.title)}` })"
+      @click.native="showModal(entry)"
     />
   </main>
 </template>
@@ -17,13 +26,15 @@ import MagicGrid from 'magic-grid'
 import Card from '@/components/Card'
 import CardAdd from '@/components/CardAdd'
 import CardNews from '@/components/CardNews'
+import Modal from '@/components/Modal'
 // import { getYposition } from '@/utils'
 
 export default {
   components: {
     Card,
     CardAdd,
-    CardNews
+    CardNews,
+    Modal
   },
   props: {
     websites: {
@@ -33,7 +44,8 @@ export default {
   },
   data: function() {
     return {
-      magicGrid: null
+      magicGrid: null,
+      currentEntry: null
     }
   },
   computed: {
@@ -52,6 +64,10 @@ export default {
     this.initGrid()
   },
   methods: {
+    showModal(entry) {
+      this.currentEntry = entry
+      this.$bvModal.show('website-modal')
+    },
     initGrid() {
       this.magicGrid = new MagicGrid({
         container: this.$el,

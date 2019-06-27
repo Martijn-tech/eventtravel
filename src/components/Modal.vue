@@ -1,119 +1,72 @@
 <template>
-  <transition name="modal-fade">
-    <div class="modal-backdrop">
-      <div
-        class="modal"
-        role="dialog"
-        aria-labelledby="modalTitle"
-        aria-describedby="modalDescription"
-      >
-        <header class="modal-header">
-          <slot name="header">
-            Default Header
-            <button
-              type="button"
-              class="btn-close"
-              @click="close"
-              aria-label="Close modal"
-            >
-              x
-            </button>
-          </slot>
-        </header>
-        <section class="modal-body">
-          <slot name="body"> </slot>
-        </section>
-        <footer class="modal-footer">
-          <slot name="footer">
-            This is the default footer
-            <button
-              type="button"
-              class="btn-green"
-              @click="close"
-              aria-label="Close modal"
-            >
-              Close me!
-            </button>
-          </slot>
-        </footer>
+  <div>
+    <b-modal id="website-modal" scrollable size="xl" hide-footer>
+      <template slot="modal-title">
+        <strong>{{ title }} </strong
+        ><span v-if="tools && tools == 'Swoogo'"
+          ><small
+            ><i
+              >(built with
+              <a
+                v-if="landingpage && landingpage !== 'null'"
+                :href="landingpage"
+                target="_blank"
+                >{{ tools }})</a
+              ></i
+            ></small
+          ></span
+        >
+      </template>
+      <div class="d-block text-center">
+        <img
+          v-if="screenshot"
+          :src="screenshot.url"
+          alt="Screenshot"
+          class="screenshot"
+        />
       </div>
-    </div>
-  </transition>
+      <b-button class="mt-3" block
+        ><a style="color: #000000;" :href="website" target="blank"
+          >Visit Event Site</a
+        ></b-button
+      >
+      <b-button class="mt-3" block @click="$bvModal.hide('website-modal')"
+        >Take Me Back</b-button
+      >
+    </b-modal>
+  </div>
 </template>
 
 <script>
 export default {
   name: 'modal',
-  methods: {
-    close() {
-      this.$emit('close')
+  props: {
+    title: {
+      type: String,
+      default: ''
+    },
+    website: {
+      type: String,
+      default: ''
+    },
+    screenshot: {
+      type: String,
+      default: ''
+    },
+    tools: {
+      type: String,
+      default: ''
+    },
+    landingpage: {
+      type: String,
+      default: ''
     }
   }
 }
 </script>
 
-<style scoped>
-.modal-fade-enter,
-.modal-fade-leave-active {
-  opacity: 0;
-}
-
-.modal-fade-enter-active,
-.modal-fade-leave-active {
-  transition: opacity 0.5s ease;
-}
-
-.modal-backdrop {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.3);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.modal {
-  background: #ffffff;
-  box-shadow: 2px 2px 20px 1px;
-  overflow-x: auto;
-  display: flex;
-  flex-direction: column;
-}
-
-.modal-header,
-.modal-footer {
-  padding: 15px;
-  display: flex;
-}
-
-.modal-header {
-  border-bottom: 1px solid #eeeeee;
-  color: #4aae9b;
-  justify-content: space-between;
-}
-
-.modal-footer {
-  border-top: 1px solid #eeeeee;
-  padding: 20px 10px;
-}
-
-.btn-close {
-  border: none;
-  font-size: 20px;
-  padding: 20px;
-  cursor: pointer;
-  font-weight: bold;
-  color: #4aae9b;
-  background: transparent;
-}
-
-.btn-green {
-  color: white;
-  background: #4aae9b;
-  border: 1px solid #4aae9b;
-  border-radius: 2px;
+<style>
+.screenshot {
+  width: 100%;
 }
 </style>
