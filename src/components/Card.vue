@@ -18,7 +18,9 @@
       </p>
     </div>
     <div class="card-body">
-      <a :href="website" target="blank" class="card-link">Visit Event Site</a>
+      <a @click.stop :href="website" target="blank" class="card-link"
+        >Visit Event Site</a
+      >
       <!-- <a v-if="tools" :href="tools" target="blank" class="card-link"
         >Crunchbase</a
       > -->
@@ -33,6 +35,7 @@
           v-if="landingpage && landingpage !== 'null'"
           :href="landingpage"
           target="_blank"
+          @click.stop
           >{{ tools }}</a
         ><span v-else>{{ tools }}</span>
       </li>
