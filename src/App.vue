@@ -52,6 +52,7 @@ export default {
       if (this.selectedTags.length === 0) return this.websites
       else
         return this.websites
+          .filter(f => !!f.tags) // only those websites that actually have a tags property
           .filter(f => f.tags.some(t => this.selectedTags.includes(t)))
           .sort((a, b) => (a.title > b.title ? 1 : a.title < b.title ? -1 : 0))
     }

@@ -2,13 +2,13 @@ const Airtable = require('airtable')
 
 Airtable.configure({
   endpointUrl: 'https://api.airtable.com',
-  apiKey: process.env.AIRTABLE_KEY || 'keyCUprna0G9NBdQu'
+  apiKey: process.env.AIRTABLE_KEY || 'keyRRAEUxBxdZvQ6o'
 })
-const base = Airtable.base('appLRFImvcpQmQfNQ')
+const base = Airtable.base('appknSupc9gHaemts')
 
 exports.handler = function(event, context, callback) {
   const allRecords = []
-  base('eventwebsites')
+  base('overview')
     .select({
       maxRecords: 100
     })

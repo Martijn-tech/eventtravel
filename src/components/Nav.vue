@@ -5,7 +5,7 @@
         v-for="(tag, i) in tags"
         :key="i"
         href="#"
-        :variant="isSelected(tag) ? 'secondary' : 'default text-muted'"
+        :variant="isSelected(tag) ? 'tertiary' : 'default text-muted'"
         @click="doSelectTag(tag)"
       >
         {{ tag }}
@@ -41,6 +41,7 @@ export default {
       return Array.from(
         new Set(
           this.websites
+            .filter(s => !!s.tags)
             .map(s => s.tags)
             .reduce((a, b) => [...a, ...b], [])
             .sort()
