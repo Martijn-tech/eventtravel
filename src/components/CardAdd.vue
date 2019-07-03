@@ -3,13 +3,13 @@
     <div class="card-img-top" alt="Logo" />
     <div class="card-body">
       <p class="card-text">
-        <a href="https://airtable.com/shrrFlvRjZDhCfbu2" target="blank">
+        <a href="https://airtable.com/shrG09XI3hB2UvLLD" target="blank">
           <img src="@/assets/imgs/plus.png" alt="plus-sign" />
         </a>
       </p>
       <p>
-        Want to list your event site here?<br />
-        <a href="https://airtable.com/shrrFlvRjZDhCfbu2" target="blank"
+        Want to list your blockchain startup here?<br />
+        <a href="https://airtable.com/shrG09XI3hB2UvLLD" target="blank"
           >Submit it for free</a
         >
       </p>
@@ -26,7 +26,7 @@ export default {
 
 <style lang="scss">
 .card-img-top {
-  background: #f2d43c;
+  background: #f6bb2e;
 }
 .card-body {
   img {

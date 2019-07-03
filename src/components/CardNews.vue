@@ -5,8 +5,8 @@
         <a
           class="twitter-timeline"
           data-height="400"
-          href="https://twitter.com/swoogo"
-          >Tweets by Swoogo</a
+          href="https://twitter.com/blockchainers"
+          >Tweets by Blockchain News</a
         >
         <!-- <script injected> -->
       </div>

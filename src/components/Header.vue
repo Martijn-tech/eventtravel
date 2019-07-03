@@ -1,10 +1,10 @@
 <template>
   <div class="container header">
     <h1 class="text-center logo">
-      Event Website Inspiration
+      Event & Travel Tech
     </h1>
     <p class="text-center lead text-secondary logo-subtitle">
-      Beautiful Event Websites From Great Companies.
+      Event & Travel Blockchain Startups You Should Watch
     </p>
   </div>
 </template>
@@ -29,7 +29,7 @@ export default {
 }
 
 .logo {
-  font-family: 'Open Sans';
+  font-family: 'Oswald';
   font-weight: 700;
   font-size: 3.5rem;
   margin-top: 1.5rem;

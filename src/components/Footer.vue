@@ -1,7 +1,6 @@
 <template>
   <div class="footer container-fluid py-4 text-center">
     <!-- TWITTER FOLLOW -->
-    Follow
     <a
       class="twitter-follow-button text-center"
       href="https://twitter.com/ckpleiser"
@@ -11,16 +10,18 @@
     <!-- TWITTER -->
     <hr />
     <p class="text-muted font-italic">
-      KickassEventSites.com has been created by
+      EventTravelTech.com has been created by
       <a href="https://twitter.com/ckpleiser">Carsten Pleiser</a> and is brought
-      to you by <a href="https://get.swoogo.com">Swoogo</a>.
+      to you by <a href="https://www.token.agency/">Token.Agency</a>.
       <br />
     </p>
     <p class="text-secondary muted">
-      <a class="text-muted" href="https://twitter.com/swoogo">@Swoogo</a>
+      <a class="text-muted" href="https://twitter.com/blockchainers"
+        >@BlockchainNews</a
+      >
       <span>|</span>
-      <a class="text-muted" href="https://airtable.com/shrrFlvRjZDhCfbu2"
-        >Submit your site</a
+      <a class="text-muted" href="https://airtable.com/shrG09XI3hB2UvLLD"
+        >Submit your Blockchain Startup</a
       >
     </p>
   </div>

@@ -4,7 +4,7 @@
     <card-add />
     <Modal
       v-if="currentEntry"
-      :title="currentEntry.title"
+      :title="currentEntry.name"
       :screenshot="currentEntry.image[0]"
       :tools="currentEntry.tools"
       :landingpage="currentEntry.landingpage"
@@ -14,8 +14,8 @@
       v-for="(entry, i) in websites"
       :key="i"
       v-bind="entry"
-      :card-id="idFromTitle(entry.title)"
-      @click="$router.push({ path: `#${idFromTitle(entry.title)}` })"
+      :card-id="idFromName(entry.company)"
+      @click="$router.push({ path: `#${idFromName(entry.company)}` })"
       @click.native="showModal(entry)"
     />
   </main>
@@ -87,8 +87,8 @@ export default {
         })
       }
     },
-    idFromTitle(title) {
-      const slug = title.toLowerCase().replace(' ', '-')
+    idFromName(name) {
+      const slug = name.toLowerCase().replace(' ', '-')
       const cardId = `card-${slug}`
       return cardId
     },
